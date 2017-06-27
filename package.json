@@ -1,0 +1,22 @@
+{
+  "name": "ceffiga",
+  "version": "1.0.0",
+  "description": "c'e figa?",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/calippo/ceffiga.git"
+  },
+  "keywords": [
+    "figa"
+  ],
+  "author": "Claudio Caletti",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/calippo/ceffiga/issues"
+  },
+  "homepage": "https://github.com/calippo/ceffiga#readme"
+}
