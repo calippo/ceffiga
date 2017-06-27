@@ -1,22 +1,37 @@
 {
-  "name": "ceffiga",
-  "version": "1.0.0",
-  "description": "c'e figa?",
-  "main": "index.js",
-  "scripts": {
-    "test": "make test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/calippo/ceffiga.git"
-  },
-  "keywords": [
-    "figa"
-  ],
-  "author": "Claudio Caletti",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/calippo/ceffiga/issues"
-  },
-  "homepage": "https://github.com/calippo/ceffiga#readme"
+    "name": "ceffiga",
+    "version": "1.0.0",
+    "description": "c'e figa?",
+    "main": "index.js",
+    "scripts": {
+        "test": "make test"
+        "lint": "scriptoni lint",
+        "lint-fix": "scriptoni lint --fix",
+        "lint-style": "scriptoni lint-style",
+        "start": "npm run clean && UV_THREADPOOL_SIZE=20 scriptoni web-dev -c ./config",
+        "build": "npm run clean && UV_THREADPOOL_SIZE=20 scriptoni web-build -c ./config",
+        "clean": "npm run clean-react && rm -rf build/* && mkdir -p build",
+        "clean-react": "rm -rf node_modules/react-intl/node_modules/react || true",
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/calippo/ceffiga.git"
+    },
+    "keywords": [
+        "figa"
+    ],
+    "author": "Claudio Caletti",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/calippo/ceffiga/issues"
+    },
+    "homepage": "https://github.com/calippo/ceffiga#readme",
+    "devDependencies": {
+        "scriptoni": "^0.6"
+    },
+    "dependencies": {
+        "react": "15.4.2",
+        "react-dom": "15.4.2",
+        "react-facebook-login": "3.6.2"
+    }
 }
